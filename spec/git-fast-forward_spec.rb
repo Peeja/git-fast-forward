@@ -90,6 +90,4 @@ describe "git fast-forward" do
       commit_named("first-branch").should == first_branch_before_ff
     end
   end
-
-  context "there is no current branch"
 end
