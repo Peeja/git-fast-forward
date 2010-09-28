@@ -1,3 +1,11 @@
-#!/bin/sh
+#!/usr/bin/env ruby
 
-git merge $1
+destination = ARGV[0]
+
+destination_is_a_descendent_of_head = (`git merge-base HEAD #{destination}` == `git rev-parse HEAD`)
+
+if destination_is_a_descendent_of_head
+  system("git merge #{destination}")
+else
+  exit 1
+end
