@@ -22,7 +22,7 @@ Here's how my team usually works:
     master$ git merge new-feature              ### <--- The problem.
     master$ git push
     
-This usually works fine, but the last part always bugs me.  We rebase to keep a linear history---that how we like it, as much as possible.  But we use the merge command, which, if things aren't rebased quite right, will make a merge commit, which is exactly what we don't want.  Usually, we won't notice it until it's pushed.  Doesn't happen a lot, but enough to write a better tool.
+This usually works fine, but the last part always bugs me.  We rebase to keep a linear history---that's how we like it, as much as possible.  But we use the merge command, which, if things aren't rebased quite right, will make a merge commit, which is exactly what we don't want.  Usually, we won't notice it until it's pushed.  Doesn't happen a lot, but enough to write a better tool.
 
 
 Usage
